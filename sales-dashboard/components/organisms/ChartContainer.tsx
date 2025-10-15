@@ -1,4 +1,3 @@
-// @ts-nocheck
 import { BarChart, Bar, LineChart, Line, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { SalesDataItem, CHART_COLORS } from '@/data/salesData';
 
@@ -53,7 +52,7 @@ export default function ChartContainer({ chartType, data }: ChartContainerProps)
                 cx="50%"
                 cy="50%"
                 labelLine={false}
-                label={(entry) => `${entry.month}: $${(entry.sales / 1000).toFixed(0)}k`}
+                label={(entry: SalesDataItem) => `${entry.month}: $${(entry.sales / 1000).toFixed(0)}k`}
                 outerRadius={120}
                 fill="#8884d8"
                 dataKey="sales"
