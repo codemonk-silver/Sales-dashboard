@@ -30,7 +30,7 @@ A modern, interactive sales analytics dashboard built with Next.js 15, TypeScrip
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+git clone https://github.com/codemonkrh-silver/sales-dashboard.git
 cd sales-dashboard
 ```
 
@@ -50,11 +50,29 @@ npm run dev
 ```
 sales-dashboard/
 ├── app/
-│   ├── page.tsx          # Main dashboard component
-│   ├── layout.tsx        # Root layout
-│   └── globals.css       # Global styles
-├── public/               # Static assets
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── atoms/
+│   │   ├── StatCard.tsx
+│   │   └── Button.tsx
+│   ├── molecules/
+│   │   ├── YearSelector.tsx
+│   │   ├── ThresholdFilter.tsx
+│   │   ├── ChartTypeSelector.tsx
+│   │   └── StatsGrid.tsx
+│   └── organisms/
+│       ├── ChartContainer.tsx
+│       ├── SalesTable.tsx
+│       └── ControlPanel.tsx
+├── data/
+│   └── salesData.ts
 ├── package.json
+├── tsconfig.json
+├── tailwind.config.ts
+├── postcss.config.js
+├── next.config.js
 └── README.md
 ```
 
@@ -102,7 +120,7 @@ MIT License - feel free to use this project for learning or commercial purposes.
 
 ## 👨‍💻 Author
 
-Your Name - [GitHub Profile](https://github.com/YOUR_USERNAME)
+Your Name - [GitHub Profile](https://github.com/codemonkrh-silver/sales-dashboard.git)
 
 ---
 
