@@ -49,12 +49,17 @@ export default function SalesDashboard() {
 
         <div className="bg-gray-800 rounded-xl p-6 shadow-xl">
           <h2 className="text-2xl font-semibold text-white mb-6">
-            {selectedYear} Sales Performance {salesThreshold && `(Above $${parseInt(salesThreshold).toLocaleString()})`}
-          </h2>
-          <ChartContainer chartType={chartType} data={thresholdFilteredData} />
-        </div>
+  {selectedYear} Sales Performance{" "}
+  {salesThreshold && `(Above $${parseInt(salesThreshold).toLocaleString()})`}
+</h2>
 
-        <SalesTable data={thresholdFilteredData} avgSales={avgSales} />
+<ChartContainer
+  chartType={chartType as "bar" | "line" | "pie"}
+  data={thresholdFilteredData}
+/>
+</div>
+
+<SalesTable data={thresholdFilteredData} avgSales={avgSales} />
       </div>
     </div>
   );
